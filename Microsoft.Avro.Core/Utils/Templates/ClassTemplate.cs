@@ -263,9 +263,12 @@ this.Write("\")]");
         {
             return;
         }
-        if (unionSchema.Schemas.Count == 2 && unionSchema.Schemas.Count(s => s is NullSchema) == 1)
+        if (unionSchema.Schemas.Count == 2 && ((unionSchema.Schemas[0] is NullSchema && unionSchema.Schemas[1] is PrimitiveTypeSchema)
+            || (unionSchema.Schemas[1] is NullSchema && unionSchema.Schemas[0] is PrimitiveTypeSchema)))
         {
+
 this.Write("\r\n        [NullableSchema]");
+
         }
         else
         {
