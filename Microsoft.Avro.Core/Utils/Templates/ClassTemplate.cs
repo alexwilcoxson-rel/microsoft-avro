@@ -153,7 +153,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(Utilities.Validate(string.Con
             if(!inAttribute && isDeclaration && !startRhs)
             {
                 
-this.Write("I");
+
 
 
             }
@@ -172,7 +172,7 @@ this.Write(">");
             if(!inAttribute && isDeclaration && !startRhs)
             {
                 
-this.Write("I");
+
 
 
             }
